@@ -1,5 +1,6 @@
 module "service_account" {
-  source = "github.com/ptonini/terraform-kubernetes-service-account?ref=v1"
+  source = "ptonini/service-account/kubernetes"
+  version = "~> 1.1.0"
   name = var.service_account_name
   namespace = var.service_account_namespace
   cluster_role_bindings = [
@@ -11,7 +12,8 @@ module "service_account" {
 }
 
 module "auth_backend" {
-  source = "github.com/ptonini/terraform-vault-auth-backend?ref=v1"
+  source = "ptonini/auth-backend/vault"
+  version = "~> 1.0.0"
   type = var.type
   path = var.path
 }
