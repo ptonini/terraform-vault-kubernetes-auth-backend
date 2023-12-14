@@ -1,3 +1,3 @@
 output "this" {
-  value = module.auth_backend.this
+  value = vault_auth_backend.this
 }

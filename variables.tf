@@ -6,12 +6,17 @@ variable "path" {
   default = "kubernetes"
 }
 
-variable "service_account_name" {
-  default = "vault-auth-backend"
+variable "kubernetes_host" {}
+
+variable "kubernetes_ca_cert" {}
+
+variable "token_reviewer_jwt" {}
+
+variable "pem_keys" {
+  type = set(string)
+  default = []
 }
 
-variable "service_account_namespace" {
-  default = "kube-system"
+variable "disable_iss_validation" {
+  default = true
 }
-
-variable "host" {}
