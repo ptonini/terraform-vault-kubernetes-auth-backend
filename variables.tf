@@ -32,4 +32,5 @@ variable "roles" {
     policies                         = optional(list(string))
     policy_definitions               = optional(list(string))
   }))
+  default = {}
 }
