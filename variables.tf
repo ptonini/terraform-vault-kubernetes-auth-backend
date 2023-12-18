@@ -33,4 +33,5 @@ variable "roles" {
     policy_definitions               = optional(list(string))
   }))
   default = {}
+  nullable = false
 }
